@@ -98,10 +98,18 @@ nav ul a :hover {
     justify-content: space-between;
     border-bottom: 1px solid #cdcccc;
 }
-i {
-    width: 10px; height: 10px;
-    border-radius: 50%;
+.addUser .headAdd .left {
+    display: flex;
+}
+.icon {
+    width: 20px;
+    height: 20px;
     background-color: #cdcccc;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .search {
     display: flex;
