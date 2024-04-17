@@ -2,11 +2,9 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-    <link rel="stylesheet" href="/css/searchUser.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <link rel="stylesheet" href="/fun/css/searchUser.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Search User Page</title>
   </head>
@@ -31,7 +29,7 @@
       <section class="main">
         <div class="head">User management</div>
         <br />
-        <button class="add-user">To add a user</button>
+        <button id="add-user" onclick="appear()">To add a user</button>
         <br />
         <div class="search">
           <select class="search-input">
@@ -68,5 +66,27 @@
         <div class="end-page"></div>
       </section>
     </main>
+    <div id="add" class="overlay">
+      <div class="addUser">
+        <head>
+          <div>
+            <i class="fa fa-angle-right"></i>
+            Add User
+          </div>
+          <button onclick="closeTab()">X</button>
+        </head>
+        <main>
+          <iframe src="/fun/css/addUser.html"></iframe>
+        </main>
+      </div>
+    </div>
   </body>
+  <script>
+    function appear() {
+      document.getElementById("add").style.height = "100%";
+    }
+    function closeTab() {
+      document.getElementById("add").style.height = "0%";
+    }
+  </script>
 </html>
